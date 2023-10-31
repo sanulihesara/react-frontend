@@ -1,9 +1,9 @@
 import React from 'react';
 
-function UserProfile(){
+function AboutMe(){
 
-    return <h2>This is my User Profile Page</h2>
+    return <h2>This is my About Me Page</h2>
 
 }
 
-export default UserProfile;
+export default AboutMe;

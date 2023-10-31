@@ -40,12 +40,12 @@ function App() {
           </Toolbar>
           </AppBar>
         <Routes>
-        <Route path="/" component={UserProfile} />
-        <Route path="/user-profile" component={UserProfile} />
-        <Route path="/about-me" component={AboutMe} />
-        <Route path="/my-school" component={MySchool} />
-        <Route path="/my-village" component={MyVillage} />
-        <Route path="/my-achievements" component={MyAchievements} />
+        <Route path="/" element={<UserProfile />} />
+        <Route path="/user-profile" element={<UserProfile />}/>
+        <Route path="/about-me" element={<AboutMe />}/>
+        <Route path="/my-school" element={<MySchool />}/>
+        <Route path="/my-village" element={<MyVillage />}/>
+        <Route path="/my-achievements" element={<MyAchievements />}/>
         </Routes>
       </div>
     </Router>
