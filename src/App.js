@@ -1,45 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import UserProfile from './UserProfile';
-import AboutMe from './AboutMe';
-import MySchool from './MySchool';
-import MyVillage from './MyVillage';
-import MyAchievements from './MyAchievements';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import UserProfile from './components/UserProfile';
+import AboutMe from './components/AboutMe';
+import MySchool from './components/MySchool';
+import MyVillage from './components/MyVillage';
+import MyAchievements from './components/MyAchievements';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 
 function App() {
   return (
    <Router>
       <div className="App">
-        <header className="App-header">
-          <h1>My Simple Web App</h1>
+        <AppBar position='static'>
+          <Toolbar>
+            <Typography variant='h6' component='div' sx={{flexGrow : 1}}>
+          My Simple Web App
+          </Typography>
           <nav>
-            <ul>
+            <ul style={{listStyle : 'none', display: 'flex', gap: '20px'}}>
               <li>
-                <Link to="/user-profile">User Profile</Link>
+                <Link to="/user-profile" style={{color:'white', textDecoration : 'none'}}>User Profile</Link>
               </li>
               <li>
-                <Link to="/about-me">About Me</Link>
+                <Link to="/about-me" style={{color:'white', textDecoration : 'none'}}>About Me</Link>
               </li>
               <li>
-                <Link to="/my-school">My School</Link>
+                <Link to="/my-school" style={{color:'white', textDecoration : 'none'}}>My School</Link>
               </li>
               <li>
-                <Link to="/my-village">My Village</Link>
+                <Link to="/my-village" style={{color:'white', textDecoration : 'none'}}>My Village</Link>
               </li>
               <li>
-                <Link to="/my-achievements">My Achievements</Link>
+                <Link to="/my-achievements" style={{color:'white', textDecoration : 'none'}}>My Achievements</Link>
               </li>
             </ul>
           </nav>
-        </header>
-
+          </Toolbar>
+          </AppBar>
+        <Routes>
+        <Route path="/" component={UserProfile} />
         <Route path="/user-profile" component={UserProfile} />
         <Route path="/about-me" component={AboutMe} />
         <Route path="/my-school" component={MySchool} />
         <Route path="/my-village" component={MyVillage} />
         <Route path="/my-achievements" component={MyAchievements} />
+        </Routes>
       </div>
     </Router>
   );
