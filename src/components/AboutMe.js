@@ -6,8 +6,10 @@ const AnimatedCard = styled(Card)`
   transition : transform 0.3s ease-in-out;
   &:hover{
     transform : scale(1.05);
+    background-color: #d775d5;
   }
   cursor : pointer;
+  background-color: #efb7ee;
 `;
 
 function AboutMe(){
@@ -20,7 +22,7 @@ function AboutMe(){
     return (
         <Grid container spacing={3} justifyContent="center" alignItems="center" alignContent="center">
             <Grid item>
-            <Paper elevation={3} style={{backgroundColor : '#3498DB', padding : '20px' , margin: '20px', textAlign : 'center'}} >
+            <Paper elevation={3} style={{backgroundColor : 'rgb(171 53 152)', padding : '20px' , margin: '20px', textAlign : 'center'}} >
                 <Typography variant="h4" style={{color : '#fff'}}>
                     About Myself
                 </Typography>
@@ -50,7 +52,7 @@ function AboutMe(){
                     A List of my Friends
                 </Typography>
             </Paper>
-            <Card>
+            <Card style={{backgroundColor : "#aecce5"}}>
             <CardContent>
                 <Grid container spacing={3} justifyContent="center" alignItems="center">
                     <Grid item>
