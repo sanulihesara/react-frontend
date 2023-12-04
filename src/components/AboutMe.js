@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Card, CardContent, Grid, Slide, Typography } from '@mui/material';
+import { Avatar, Card, CardContent, Grid, Paper, Slide, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
 const AnimatedCard = styled(Card)`
@@ -18,7 +18,7 @@ function AboutMe(){
     }
 
     return (
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={3} justifyContent="center" alignContent="">
             <Grid item>
                 <Slide direction="right" in={true} timeout={5}>
                     <AnimatedCard onClick={handleCardClick} 
@@ -37,6 +37,64 @@ function AboutMe(){
                     </AnimatedCard>
                 </Slide>
             </Grid>
+
+            <Grid item>
+
+            <Paper elevation={3} style={{backgroundColor : '#3498DB', padding : '20px' , margin: '20px', textAlign : 'center'}} >
+                <Typography variant="h4" style={{color : '#fff'}}>
+                    A List of my Friends
+                </Typography>
+            </Paper>
+            <Card>
+            <CardContent>
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
+                    <Grid item>
+                        <Avatar
+                            alt="My Username"
+                            src="https://lakeoktransport.ca/images/avataaars1.png"
+                            sx={{ width: 60, height: 60 }}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Typography color="textSecondary" variant='h6'> Sandun Nawarathna </Typography>
+                        <Typography> Expertise : HTML, C#, Processing, React </Typography>
+                        <Typography> Hi my name is Sandun Nawarathna. I am a Software Developer. </Typography>
+
+                    </Grid>
+                </Grid>
+                <hr></hr>
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
+                    <Grid item>
+                        <Avatar
+                            alt="My Username"
+                            src="https://lakeoktransport.ca/images/avataaars3.png"
+                            sx={{ width: 60, height: 60 }}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Typography color="textSecondary" variant='h6'> Sahan Sulakshana Silva </Typography>
+                        <Typography > Expertise : HTML, C#, Processing, React </Typography>
+                        <Typography > Hi my name is Sahan Sulakshana Silva. I am a Software Developer. </Typography>
+                    </Grid>
+                </Grid>
+                <hr></hr>
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
+                    <Grid item>
+                        <Avatar
+                            alt="My Username"
+                            src="https://lakeoktransport.ca/images/avataaars4.png"
+                            sx={{ width: 60, height: 60 }}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Typography color="textSecondary" variant='h6'> Rusira Samarasekara </Typography>
+                        <Typography > Expertise : HTML, C#, Processing, React </Typography>
+                        <Typography > Hi my name is Rusira Samarasekara. I am a Software Developer. </Typography>
+                    </Grid>
+                </Grid>
+            </CardContent>
+        </Card>
+        </Grid>
 
         </Grid>
     );
