@@ -18,7 +18,7 @@ function AboutMe(){
     }
 
     return (
-        <Grid container spacing={3} justifyContent="center" alignContent="">
+        <Grid container spacing={3} justifyContent="center" alignItems="center" alignContent="center">
             <Grid item>
                 <Slide direction="right" in={true} timeout={5}>
                     <AnimatedCard onClick={handleCardClick} 
