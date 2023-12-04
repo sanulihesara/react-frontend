@@ -20,6 +20,11 @@ function AboutMe(){
     return (
         <Grid container spacing={3} justifyContent="center" alignItems="center" alignContent="center">
             <Grid item>
+            <Paper elevation={3} style={{backgroundColor : '#3498DB', padding : '20px' , margin: '20px', textAlign : 'center'}} >
+                <Typography variant="h4" style={{color : '#fff'}}>
+                    About Myself
+                </Typography>
+            </Paper>
                 <Slide direction="right" in={true} timeout={5}>
                     <AnimatedCard onClick={handleCardClick} 
                     style={{transform: expanded ? 'scale(1.25)' : 'scale(1)' }}>
