@@ -16,6 +16,8 @@ const rows = [
     createData("Passed Term Test", "School", "2023-01-10"),
     createData("Passed IT Course", "Software Development", "2023-11-13"),
     createData("2nd Place in Running Event", "Athletics", "2023-03-13"),
+    createData("Went to NASA", "Astronomy", "2023-08-13"),
+    createData("Went to Ferrari Company", "Automobile", "2024-08-13"),
 ];
 
 const headCells = [
@@ -100,6 +102,14 @@ const MyAchievements = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <TablePagination
+                rowsPerPageOptions={[5,10,25]}
+                component="div"
+                count={rows.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onPageChange={handleChangePage}
+                onRowsPerPageChange={handleChangeRowsPerPage} />       
         </Paper>
     );
 };
