@@ -6,14 +6,33 @@ import AboutMe from './components/AboutMe';
 import MySchool from './components/MySchool';
 import MyVillage from './components/MyVillage';
 import MyAchievements from './components/MyAchievements';
-import { AppBar, Toolbar, Typography } from '@mui/material';
-import React from 'react';
+import { AppBar, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, MenuList, Toolbar, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { AccountCircleOutlined, AccountCircleRounded, CelebrationRounded, HolidayVillageRounded, Home, HomeRounded, MenuBookRounded, SchoolRounded } from '@mui/icons-material';
+
+const DrawerItems = [
+  { text : 'Home', icon : <HomeRounded /> , path : '/' },
+  { text : 'User Profile', icon : <AccountCircleRounded /> , path : '/user-profile' },
+  { text : 'My School', icon : <SchoolRounded /> , path : '/my-school' },
+  { text : 'My Village', icon : <HolidayVillageRounded /> , path : '/my-village' },
+  { text : 'My Achievements', icon : <CelebrationRounded /> , path : '/my-achievements' },
+];
 
 function App() {
+
+  const [isDrawerOpen, setIsDrawerOpen ] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
   return (
    <Router>
       <div className="App">
-        <AppBar position='static'>
+        <AppBar>
+          <IconButton aria-label='menu' onClick={toggleDrawer}>
+            <MenuBookRounded />
+          </IconButton>
           <Toolbar>
             <Typography variant='h6' component='div' sx={{flexGrow : 1}}>
           My Simple Web App
@@ -38,7 +57,19 @@ function App() {
             </ul>
           </nav>
           </Toolbar>
-          </AppBar>
+        </AppBar>
+
+        <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer}>
+          <List>
+            {DrawerItems.map( (item) => (
+              <ListItem button key={item.text} component={Link} to={item.path} onClick={toggleDrawer}>
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.text} />
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
+
         <Routes>
         <Route path="/" element={<UserProfile />} />
         <Route path="/user-profile" element={<UserProfile />}/>
