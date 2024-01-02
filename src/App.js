@@ -28,8 +28,8 @@ function App() {
 
   return (
    <Router>
-      <div className="App">
-        <AppBar>
+      <div className="App" >
+        <AppBar position="sticky">
           <IconButton aria-label='menu' onClick={toggleDrawer}>
             <MenuBookRounded />
           </IconButton>
