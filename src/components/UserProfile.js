@@ -9,13 +9,18 @@ const UserProfile = ()  => {
         school : 'Central College, Colombo',
         dob : 'January 3rd, 2009',
         email : 'tharindu@gmail.com',
-        description : 'I am a programming enthusiast!'
+        description : 'I am a programming enthusiast!',
+        hobby : '',
+        hometown : '',
+        age : '',
+        phone : '0112222222',
+        ambition : ''
     };
 
     return (
        <Grid container spacing={3}>
-        <Grid item xs={12} md={4} lg={3}>
-            <Paper style={{padding : 20 , textAlign : 'center' , alignItems : 'center'}}>
+        <Grid item xs={12} md={4} lg={3} style={{ marginTop : "64px"}}>
+            <Paper style={{padding : 20 , textAlign : 'center' , alignItems : 'center', display : 'flex', justifyContent : 'center', flexDirection: 'column'}}>
                 <Avatar 
                 alt="My Image"
                 src="https://lakeoktransport.ca/images/avataaars3.png"
