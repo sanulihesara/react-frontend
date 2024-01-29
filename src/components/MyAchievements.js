@@ -10,14 +10,14 @@ const createData = (name, category, date) => {
 }
 
 const rows = [
-    createData("1st Place in Running Event", "Athletics", "2023-04-20"),
-    createData("2nd Place in Singing Contest", "Singing", "2021-02-19"),
-    createData("3rd Place in Music Event", "Music", "2023-11-23"),
-    createData("Passed Term Test", "School", "2023-01-10"),
-    createData("Passed IT Course", "Software Development", "2023-11-13"),
-    createData("2nd Place in Running Event", "Athletics", "2023-03-13"),
-    createData("Went to NASA", "Astronomy", "2023-08-13"),
-    createData("Went to Ferrari Company", "Automobile", "2024-08-13"),
+    createData("1st Place in Running Event", "Athletics", "2023-03-23"),
+    createData("2nd Place in Music Competition", "Music", "2023-12-01"),
+    createData("3rd Place in badminton zonals", "Sports", "2023-10-03"),
+    createData("Passed Mid-Term Test", "School", "2023-05-24"),
+    createData("1st place in Long Jump", "Athletic", "2023-03-03"),
+    createData("Won a championship in mt school annual athletic meet", "Athletics", "2023-03-03"),
+    createData("Won 2nd place in a debate", "School", "2024-01-14"),
+    createData("Went to Glove Factory", "Automobile", "2023-07-09"),
 ];
 
 const headCells = [
